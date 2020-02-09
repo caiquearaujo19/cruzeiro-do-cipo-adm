@@ -1,0 +1,13 @@
+.float-button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 75px;
+  right: 15px;
+  outline: none;
+
+  & > img {
+    height: 40px;
+  }
+}

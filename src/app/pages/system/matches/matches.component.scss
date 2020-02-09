@@ -1,0 +1,22 @@
+.matches {
+  &__list {
+    list-style: none;
+
+    &__item {
+      padding: 15px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid grey;
+      }
+
+      &__title {
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+
+      &__subtitle {
+        color: grey;
+      }
+    }
+  }
+}

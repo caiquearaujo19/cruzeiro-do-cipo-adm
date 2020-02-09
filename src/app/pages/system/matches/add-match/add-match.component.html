@@ -1,0 +1,46 @@
+<page-header>Registrar jogo</page-header>
+<article class="add-match">
+  <form class="add-match__form">
+    <div class="add-match__form__item">
+      <input [(ngModel)]="match.adversary" name="adversary" type="text" placeholder="Adiversário">
+    </div>
+    <div class="add-match__form__item">
+      <select [(ngModel)]="match.place" name="place">
+        <option ngValue="Casa">Casa</option>
+        <option ngValue="Fora">Fora</option>
+      </select>
+    </div>
+    <div class="add-match__form__item">
+      <input [(ngModel)]="match.date" name="date" type="text" placeholder="Data">
+    </div>
+    <div class="add-match__form__item add-match__form__item--result">
+      <div class="add-match__form__item--result__team">Cipó</div>
+      <div class="add-match__form__item--result__input">
+        <input [(ngModel)]="match.goalsCipo" name="goalsCipo" type="number" min="0" (change)="onGoalsCipoChange()">
+      </div>
+      <div class="add-match__form__item--result__x">X</div>
+      <div class="add-match__form__item--result__input">
+        <input [(ngModel)]="match.goalsAdversary" name="goalsAdversary" type="number" min="0">
+      </div>
+      <div class="add-match__form__item--result__team">Adiversário</div>
+    </div>
+    <div *ngIf="match.goalsCipo > 0">
+      <div *ngFor="let goal of goalsArray(match.goalsCipo); let i = index" class="add-match__form__item add-match__form__item--goal">
+        <select [(ngModel)]="match.scorers[i]" name="scorer-{{i}}" (change)="changePlayerGoals(i)">
+          <option ngValue="Gol contra">Gol contra</option>
+          <option *ngFor="let player of players" [ngValue]="player.id">{{player.name}}</option>
+        </select>
+        <select [(ngModel)]="match.assists[i]" name="assist-{{i}}" (change)="changePlayerAssists(i)">
+          <option [ngValue]="null">Sem assistência</option>
+          <option *ngFor="let player of players" [ngValue]="player.id">{{player.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="add-match__form__item">
+      <button (click)="onSubmit()">Registrar</button>
+    </div>
+    <div class="add-match__form__item">
+      <button class="add-match__form__item__cancel-btn" (click)="onCancel()">Cancelar</button>
+    </div>
+  </form>
+</article>

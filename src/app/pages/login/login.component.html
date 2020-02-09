@@ -1,0 +1,16 @@
+<article class="login">
+  <div class="login__logo">
+    <img src="../../../assets/images/logo.png" alt="Cruzeiro do Cipó">
+  </div>
+  <form class="login__form" (submit)="onLogin()">
+    <div class="login__form__item">
+      <input [(ngModel)]="email" name="email" type="email" placeholder="E-mail">
+    </div>
+    <div class="login__form__item">
+      <input [(ngModel)]="password" name="password" type="password" placeholder="Senha">
+    </div>
+    <div class="login__form__item">
+      <button type="submit">Entrar</button>
+    </div>
+  </form>
+</article>

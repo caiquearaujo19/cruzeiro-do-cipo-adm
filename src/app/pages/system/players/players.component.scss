@@ -1,0 +1,14 @@
+.players {
+  &__list {
+    list-style: none;
+
+    &__item {
+      padding: 20px;
+      font-weight: bold;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid grey;
+      }
+    }
+  }
+}

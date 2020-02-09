@@ -1,0 +1,24 @@
+.tab-bar {
+  height: 60px;
+  width: 100vw;
+  background-color: #005896;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+
+  &__item {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+    & > img {
+      height: 38px;
+    }
+
+    &--active {
+      background-color: rgba(black, 0.2);
+    }
+  }
+}

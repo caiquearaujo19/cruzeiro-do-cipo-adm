@@ -1,0 +1,14 @@
+<page-header>Jogos</page-header>
+<article *ngIf="matches !== undefined" class="matches">
+  <ul class="matches__list">
+    <li *ngFor="let match of matches.reverse()" class="matches__list__item" [routerLink]="['/matches/edit', match.id]">
+      <div class="matches__list__item__title">
+        {{match.adversary}} - ({{match.goalsCipo}} X {{match.goalsAdversary}})
+      </div>
+      <div class="matches__list__item__subtitle">
+        {{match.place}} - {{match.date}}
+      </div>
+    </li>
+  </ul>
+  <float-button [routerLink]="['/matches/add']"></float-button>
+</article>

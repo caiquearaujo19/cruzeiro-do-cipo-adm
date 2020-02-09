@@ -1,0 +1,11 @@
+.next-match {
+  padding: 15px;
+
+  &__form {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

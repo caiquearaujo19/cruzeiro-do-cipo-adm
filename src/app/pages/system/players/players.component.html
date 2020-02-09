@@ -1,0 +1,7 @@
+<page-header>Jogadores</page-header>
+<article class="players">
+  <ul class="players__list">
+    <li *ngFor="let player of players" class="players__list__item" [routerLink]="['/players/edit', player.id]">{{player.name}}</li>
+  </ul>
+  <float-button [routerLink]="['/players/add']"></float-button>
+</article>

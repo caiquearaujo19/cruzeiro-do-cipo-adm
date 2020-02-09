@@ -1,0 +1,14 @@
+<page-header>Editar jogador</page-header>
+<article class="edit-player">
+  <form *ngIf="player !== undefined" class="edit-player__form">
+    <div class="edit-player__form__item">
+      <input [(ngModel)]="player.name" name="playerName" type="text" placeholder="Nome do jogador">
+    </div>
+    <div class="edit-player__form__item">
+      <button (click)="onUpdate()">Editar</button>
+    </div>
+    <div class="edit-player__form__item">
+      <button class="edit-player__form__item__cancel-btn" (click)="onCancel()">Cancelar</button>
+    </div>
+  </form>
+</article>

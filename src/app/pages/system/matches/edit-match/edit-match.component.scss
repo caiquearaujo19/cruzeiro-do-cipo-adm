@@ -1,0 +1,53 @@
+.edit-match {
+  padding: 15px;
+
+  &__form {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &--result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__team {
+          width: 22px;
+          margin-right: 10px;
+        }
+
+        &__input {
+          width: 50px;
+          margin: 0 10px;
+
+          & > input {
+            padding: 0;
+            text-align: center;
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          }
+        }
+      }
+
+      &--goal {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+          margin-bottom: 10px;
+        }
+
+        & > select {
+          width: calc(50% - 5px);
+        }
+      }
+
+      &__cancel-btn {
+        background-color: transparent;
+        border: 1px solid #005896;
+        color: #005896;
+      }
+    }
+  }
+}

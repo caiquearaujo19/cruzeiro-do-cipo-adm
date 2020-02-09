@@ -1,0 +1,17 @@
+.edit-player {
+  padding: 15px;
+
+  &__form {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &__cancel-btn {
+        background-color: transparent;
+        border: 1px solid #005896;
+        color: #005896;
+      }
+    }
+  }
+}

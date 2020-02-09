@@ -1,0 +1,14 @@
+<page-header>Adicionar jogador</page-header>
+<article class="add-player">
+  <form class="add-player__form">
+    <div class="add-player__form__item">
+      <input [(ngModel)]="player.name" name="playerName" type="text" placeholder="Nome do jogador">
+    </div>
+    <div class="add-player__form__item">
+      <button (click)="onSubmit()">Adicionar</button>
+    </div>
+    <div class="add-player__form__item">
+      <button class="add-player__form__item__cancel-btn" (click)="onCancel()">Cancelar</button>
+    </div>
+  </form>
+</article>

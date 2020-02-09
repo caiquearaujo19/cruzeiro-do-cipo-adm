@@ -1,0 +1,20 @@
+<page-header>Próximo jogo</page-header>
+<article *ngIf="nextMatch !== undefined" class="next-match">
+  <form class="next-match__form">
+    <div class="next-match__form__item">
+      <select [(ngModel)]="nextMatch.place" name="place">
+        <option ngValue="Casa">Casa</option>
+        <option ngValue="Fora">Fora</option>
+      </select>
+    </div>
+    <div class="next-match__form__item">
+      <input [(ngModel)]="nextMatch.date" name="date" type="text" placeholder="Data">
+    </div>
+    <div class="next-match__form__item">
+      <input [(ngModel)]="nextMatch.adversary" name="adversary" type="text" placeholder="Adversário">
+    </div>
+    <div class="next-match__form__item">
+      <button (click)="onUpdate()">Atualizar</button>
+    </div>
+  </form>
+</article>
