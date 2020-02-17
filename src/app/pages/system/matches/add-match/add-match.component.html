@@ -28,11 +28,11 @@
       <div *ngFor="let goal of goalsArray(match.goalsCipo); let i = index" class="add-match__form__item add-match__form__item--goal">
         <select [(ngModel)]="match.scorers[i]" name="scorer-{{i}}" (change)="changePlayerGoals(i)">
           <option ngValue="Gol contra">Gol contra</option>
-          <option *ngFor="let player of players" [ngValue]="player.id">{{player.name}}</option>
+          <option *ngFor="let player of players" [ngValue]="{id: player.id, name: player.name}">{{player.name}}</option>
         </select>
         <select [(ngModel)]="match.assists[i]" name="assist-{{i}}" (change)="changePlayerAssists(i)">
           <option [ngValue]="null">Sem assistência</option>
-          <option *ngFor="let player of players" [ngValue]="player.id">{{player.name}}</option>
+          <option *ngFor="let player of players" [ngValue]="{id: player.id, name: player.name}">{{player.name}}</option>
         </select>
       </div>
     </div>
